@@ -1,6 +1,19 @@
-.achievements-section {
-    padding: 3rem 2rem;
+/* achievements.scss */
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     background-color: var(--bg-color);
+  }
+  
+  .main-content {
+    flex: 1;
+    padding-top: 80px; /* Navbar height */
+    padding-bottom: 40px;
+  }
+  
+  .achievements-section {
+    padding: 3rem 2rem;
     
     h2 {
       text-align: center;
@@ -78,6 +91,10 @@
   }
   
   @media (max-width: 768px) {
+    .main-content {
+      padding-top: 70px; /* Adjusted for mobile */
+    }
+    
     .achievements-section {
       padding: 2rem 1rem;
     }
