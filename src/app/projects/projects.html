@@ -1,0 +1,41 @@
+<section class="projects-section">
+    <div class="projects-container">
+      <h2>Featured Projects</h2>
+      
+      <div class="projects-grid">
+        <div class="project-card" *ngFor="let project of projects">
+          <div class="card-content">
+            <h3>{{ project.title }}</h3>
+            <p class="description">{{ project.description }}</p>
+            
+            <div class="technologies">
+              <h4>Technologies Used:</h4>
+              <div class="tech-tags">
+                <span class="tech-tag" *ngFor="let tech of project.technologies">
+                  {{ tech }}
+                </span>
+              </div>
+            </div>
+            
+            <div class="features">
+              <h4>Key Features:</h4>
+              <ul>
+                <li *ngFor="let feature of project.features">
+                  {{ feature }}
+                </li>
+              </ul>
+            </div>
+            
+            <div class="project-links">
+              <a [href]="project.github" target="_blank" class="btn github-link">
+                <i class="fab fa-github"></i> View Code
+              </a>
+              <a [href]="project.demo" target="_blank" class="btn demo-link">
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

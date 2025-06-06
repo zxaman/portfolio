@@ -1,0 +1,21 @@
+<nav class="navbar">
+    <div class="navbar-brand">
+      <a href="/" class="logo">Aman</a>
+      <button class="menu-toggle" (click)="toggleMenu()" [attr.aria-expanded]="isMenuOpen">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+  
+    <div class="nav-links" [class.active]="isMenuOpen">
+      @for (item of navItems; track item.path) {
+        <a [routerLink]="item.path"
+           routerLinkActive="active"
+           [routerLinkActiveOptions]="{exact: item.path === '/home'}"
+           (click)="isMenuOpen = false">
+          {{item.label}}
+        </a>
+      }
+    </div>
+  </nav>

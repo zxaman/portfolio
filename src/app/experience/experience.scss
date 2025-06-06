@@ -1,0 +1,124 @@
+.experience-section {
+    padding: 3rem 2rem;
+    background-color: var(--bg-color);
+    
+    h2 {
+      text-align: center;
+      color: var(--primary-color);
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+    }
+  }
+  
+  .experience-container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .timeline {
+    position: relative;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 2px;
+      background-color: var(--accent-color);
+    }
+  }
+  
+  .experience-card {
+    position: relative;
+    margin-left: 30px;
+    padding: 2rem;
+    background: var(--card-bg);
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+    &::before {
+      content: '';
+      position: absolute;
+      left: -36px;
+      top: 2rem;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: var(--accent-color);
+      border: 4px solid var(--bg-color);
+    }
+    
+    .card-header {
+      margin-bottom: 1.5rem;
+      
+      h3 {
+        color: var(--primary-color);
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+      }
+      
+      h4 {
+        color: var(--secondary-color);
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+      }
+      
+      .period-location {
+        display: flex;
+        justify-content: space-between;
+        color: var(--text-secondary);
+        font-size: 0.9rem;
+        
+        .period, .location {
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+    
+    .responsibilities {
+      ul {
+        list-style-type: none;
+        padding: 0;
+        
+        li {
+          position: relative;
+          padding-left: 1.5rem;
+          margin-bottom: 0.8rem;
+          color: var(--text-color);
+          line-height: 1.5;
+          
+          &::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+          }
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .experience-section {
+      padding: 2rem 1rem;
+    }
+    
+    .experience-card {
+      margin-left: 20px;
+      padding: 1.5rem;
+      
+      &::before {
+        left: -26px;
+      }
+      
+      .card-header {
+        .period-location {
+          flex-direction: column;
+          gap: 0.3rem;
+        }
+      }
+    }
+  }

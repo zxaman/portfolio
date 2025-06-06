@@ -1,0 +1,16 @@
+<footer class="footer">
+    <div class="footer-content">
+      <div class="social-links">
+        @for (link of socialLinks; track link.url) {
+          <a [href]="link.url" target="_blank" rel="noopener noreferrer" [attr.aria-label]="link.name">
+            <i [class]="link.icon"></i>
+          </a>
+        }
+      </div>
+      
+      <div class="footer-text">
+        <p class="copyright">&copy; {{currentYear}} Aman. All rights reserved.</p>
+        <p class="made-with">Made with <span class="heart">❤</span> using Angular</p>
+      </div>
+    </div>
+  </footer>

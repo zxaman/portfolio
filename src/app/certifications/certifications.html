@@ -1,0 +1,19 @@
+<section class="certifications-section">
+    <div class="certifications-container">
+      <h2>Professional Certifications</h2>
+      
+      <div class="certifications-grid">
+        <div class="certification-card" *ngFor="let cert of certifications">
+          <h3>{{ cert.name }}</h3>
+          <div class="cert-details">
+            <p class="issuer">{{ cert.issuer }}</p>
+            <p class="date">Issued: {{ cert.date }}</p>
+            <p class="credential-id">Credential ID: {{ cert.credentialId }}</p>
+          </div>
+          <a [href]="cert.link" target="_blank" class="verify-btn">
+            Verify Certificate
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>

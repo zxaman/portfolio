@@ -1,0 +1,16 @@
+<section class="achievements-section">
+    <div class="achievements-container">
+      <h2>Achievements & Recognition</h2>
+      
+      <div class="achievements-timeline">
+        <div class="achievement-card" *ngFor="let achievement of achievements">
+          <div class="achievement-content">
+            <h3>{{ achievement.title }}</h3>
+            <p class="organization">{{ achievement.organization }}</p>
+            <p class="date">{{ achievement.date }}</p>
+            <p class="description">{{ achievement.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
